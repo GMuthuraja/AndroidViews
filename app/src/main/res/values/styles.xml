@@ -10,7 +10,7 @@
 
 
     <style name="SwitchTheme" parent="Theme.AppCompat.Light">
-        <item name="colorControlActivated">#FF0</item>
+        <item name="colorControlActivated">#FFB900</item>
     </style>
 
 </resources>

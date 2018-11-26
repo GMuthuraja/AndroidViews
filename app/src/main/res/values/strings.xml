@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">AndroidViews</string>
+
+    <string-array name="spinner_input">
+        <item>Select the course</item>
+        <item>Java</item>
+        <item>Android</item>
+        <item>Cordova</item>
+        <item>AngularJS</item>
+        <item>ReactJs</item>
+    </string-array>
 </resources>

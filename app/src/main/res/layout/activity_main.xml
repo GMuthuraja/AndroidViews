@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -11,67 +11,94 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <ImageButton
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/butterfly"
-        android:scaleType="fitXY"
-        android:onClick="getLogin"
-        android:adjustViewBounds="true" />
+        android:inputType="text"
+        android:hint="Enter your name"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/checkBox1"
-        android:checked="true"
-        android:textColor="@color/colorPrimary"
-        android:buttonTint="@color/colorPrimary"
-        android:text="Android"/>
+        android:inputType="number"
+        android:hint="Mobile Number"/>
 
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/checkBox2"
-        android:text="iOS"/>
-
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="15dp"
+       android:textStyle="bold"
+       android:textSize="20dp"
+       android:text="Gender:"/>
 
     <RadioGroup
-        android:id="@+id/radioGroup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+       android:id="@+id/radioGroup"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal">
 
         <RadioButton
-            android:id="@+id/radioBtn1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:checked="true"
-            android:buttonTint="@color/colorPrimary"
-            android:text="Male"/>
-
-
-        <RadioButton
-            android:id="@+id/radioBtn2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Female"/>
+           android:id="@+id/radioBtn1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:checked="true"
+           android:buttonTint="@color/colorPrimary"
+           android:text="Male"/>
 
         <RadioButton
-            android:id="@+id/radioBtn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Other"/>
-
+           android:id="@+id/radioBtn2"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:buttonTint="@color/colorPrimary"
+           android:text="Female"/>
     </RadioGroup>
 
+    <Spinner
+       android:id="@+id/spinnerItems"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="10dp"
+       android:spinnerMode="dropdown" />
 
-    <ToggleButton
-        android:id="@+id/toggleBtn"
-        android:layout_width="wrap_content"
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textStyle="bold"
+       android:layout_marginTop="15dp"
+       android:textSize="20dp"
+       android:text="Class Timing:"/>
+
+    <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <CheckBox
+               android:id="@+id/checkBox1"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:checked="true"
+               android:textColor="@color/colorPrimary"
+               android:buttonTint="#00EF00"
+               android:text="Regular"/>
+
+           <CheckBox
+               android:id="@+id/checkBox2"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:buttonTint="#00EF00"
+               android:text="Weekend only"/>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:theme="@style/SwitchTheme"
-        android:textOff="OFF"
-        android:textOn="ON"/>
-
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textSize="20dp"
+        android:text="Flexible for anytime:"/>
 
     <Switch
         android:id="@+id/switchBtn"
@@ -81,38 +108,74 @@
         android:textOff="OFF"
         android:textOn="ON" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textStyle="bold"
+        android:textSize="20dp"
+        android:layout_marginTop="15dp"
+        android:text="Fastrack Class:"/>
 
-    <RatingBar
-        android:id="@+id/ratingBar"
+    <ToggleButton
+        android:id="@+id/toggleBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:numStars="6"
-        android:progressBackgroundTint="@color/colorAccent"
-        android:progressTint="@color/colorPrimary"/>
+        android:theme="@style/SwitchTheme"
+        android:textOff="OFF"
+        android:textOn="ON"/>
 
-
-    <SeekBar
-        android:id="@+id/seekBar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textStyle="bold"
+       android:textSize="20dp"
+       android:layout_marginTop="15dp"
+       android:text="When you can join:"/>
 
     <DatePicker
         android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textStyle="bold"
+       android:textSize="20dp"
+       android:layout_marginTop="10dp"
+       android:layout_marginBottom="10dp"
+       android:text="Prefer timing for class:"/>
+
+    <TimePicker
+        android:id="@+id/timePicker"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"/>
 
+    <TextView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:textStyle="bold"
+       android:layout_marginTop="15dp"
+       android:textSize="20dp"
+       android:text="Slide the below bar until end to submit the details."/>
 
-        <CalendarView
-            android:id="@+id/calenderView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <SeekBar
+       android:id="@+id/seekBar"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content" />
 
+ <!--   <CalendarView
+        android:id="@+id/calenderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>-->
 
-        <TimePicker
-            android:id="@+id/timePicker"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:text="Submit"/>
 
     </LinearLayout>
 </ScrollView>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF"
+    tools:context=".Main2Activity">
+
+    <FrameLayout
+        android:id="@+id/thank_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/thank_bck"
+            android:text="Thank You"
+            android:textStyle="bold"
+            android:textColor="@android:color/holo_green_dark"
+            android:layout_marginTop="110dp"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40sp"/>
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:adjustViewBounds="true"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/thank_tck"/>
+
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/labelText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/ratingBar"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="Please give us your rating below for this service." />
+
+
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/doneBtn"
+        android:numStars="6"
+        android:progressBackgroundTint="#EFEF00"
+        android:progressTint="@color/colorAccent"/>
+
+    <Button
+        android:id="@+id/doneBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:onClick="registerCompletion"
+        android:background="@android:color/holo_green_dark"
+        android:textColor="#FFF"
+        android:text="Done"/>
+
+
+</RelativeLayout>
